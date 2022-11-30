@@ -9,7 +9,7 @@ import com.acti.pages.LoginPages;
 
 public class LoginPageTests extends DriverScript
 {
-    @Test (priority = 1) 
+    @Test 
     public void TestLoginPagesTitle ()
 	{
     	initApplication();
@@ -19,7 +19,7 @@ public class LoginPageTests extends DriverScript
 		 Assert.assertEquals(actual, expected);
 		   quitdriver();
 	}
-    @Test (priority = 2)
+    @Test 
     public void testActiImageIsDisplayed()
     {
     	initApplication();
@@ -28,7 +28,7 @@ public class LoginPageTests extends DriverScript
     	Assert.assertTrue(flag);
     	quitdriver();
     }
-    @Test (priority = 3)
+    @Test 
     public void testForgotPasswordIsDisplayed()
     {
     	initApplication();
@@ -37,7 +37,7 @@ public class LoginPageTests extends DriverScript
     	 Assert.assertTrue(flag);
      	 quitdriver();
     }
-    @Test (priority = 4)
+    @Test
     public void testLoginFunction()
     {
     	initApplication();
