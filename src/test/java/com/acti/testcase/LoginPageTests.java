@@ -36,7 +36,7 @@ public class LoginPageTests extends BaseTest {
 
 		lp.enterUsername("admin");
 		lp.enterPassword("manager");
-		lp.loginClick();
+		lp.Clicklogin();
 		String expected = "John Doe";
 		String actual = ep.VerifyUSerLoggedIn();
 		Assert.assertEquals(actual, expected);

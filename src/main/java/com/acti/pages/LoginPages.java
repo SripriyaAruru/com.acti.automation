@@ -44,7 +44,7 @@ public class LoginPages extends DriverScript
 		passwordTextbox.sendKeys( Password);
 	}
 	
-	public void loginClick ()
+	public void Clicklogin ()
 	{
 		LoginButton.click();
 	}
