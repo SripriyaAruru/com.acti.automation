@@ -7,20 +7,20 @@ import org.testng.annotations.DataProvider;
 import com.acti.base.DriverScript;
 import com.acti.pages.EnterPage;
 import com.acti.pages.LoginPages;
+import com.acti.pages.TasksPage;
 import com.acti.utility.ExcelLib;
 
 public class BaseTest extends DriverScript {
 	LoginPages lp;
 	EnterPage ep;
-	TaskPageTest tp;
+	 TasksPage tp;
 
 	@BeforeMethod
 	public void Setup() {
 		initApplication();
 		lp = new LoginPages();
 		ep = new EnterPage();
-		 tp = new TaskPageTest();
-
+		 tp = new TasksPage();
 		}
 
 	@AfterMethod
