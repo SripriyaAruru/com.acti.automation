@@ -12,13 +12,13 @@ public class TaskPageTest extends BaseTest {
 	{
 		lp.enterUsername(Username);
 		lp.enterPassword(Password);
-		lp.Clicklogin();
+		lp.clickLogin();
 		ep.clickTaskMenu();
-		tp.ClickAddNewwButton();		
-		tp.clicknewcustomeritem();
-		tp.Entercustomernametextbox("TestCustomer");
-		tp.EntercustomerDescription("Dummy Customer created for testing ");
-		tp.ClickcreateCustomerButton();
+		tp.clickAddNewButton();		
+		tp.clickNewCustomerItem();
+		tp.enterCustomerName("TestCustomer");
+		tp.enterCustomerDescription("Dummy Customer created for testing ");
+		tp.clickCreateCustomer();
 		String sesuccessmessage = tp.getSuccessMessage();
 		Assert.assertTrue(sesuccessmessage.contains(" has been created"));
 		ep.ClickLogout();
@@ -29,7 +29,7 @@ public class TaskPageTest extends BaseTest {
 
 		lp.enterUsername(Username);
 		lp.enterPassword(Password);
-		lp.Clicklogin();
+		lp.clickLogin();
 		ep.clickTaskMenu();
 		tp.enterSearchCustomer("TestCustomer");
 		tp.clickSearchedCustomer();

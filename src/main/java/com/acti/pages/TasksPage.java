@@ -20,23 +20,20 @@ public class TasksPage extends DriverScript {
 	
 	// ********************************Page  Elements**********************************//
 	
-	@FindBy(xpath="//div[@class='title ellipsis']") WebElement AddNewButton;
-	@FindBy(xpath="//div[@class='item createNewCustomer']") WebElement newcustomeritem;
-	@FindBy(xpath = "(//input[@placeholder = 'Enter Customer Name'])[2]") WebElement customernameTextbox;
-	@FindBy(xpath = "//textarea[@placeholder = 'Enter Customer Description']") WebElement CustomerDescriptionTextBox;
-	@FindBy(xpath = "//div[contains(text(),'Create Customer')]") WebElement createCustomerButton;
-	@FindBy(xpath = "//span[@class='innerHtml']") WebElement SuccessMessage;
+	@FindBy(xpath = "//div[text()='Add New']") WebElement addNewButton;
+	@FindBy(xpath = "//div[text()='+ New Customer']") WebElement newCustomerItem;
+	@FindBy(xpath = "(//input[@placeholder='Enter Customer Name'])[2]") WebElement customernameTextbox;
+	@FindBy(xpath = "//textarea[@placeholder='Enter Customer Description']") WebElement customerdescriptionTextarea;
+	@FindBy(xpath = "//div[text()='Create Customer']") WebElement createcustomerButton;
+	@FindBy(xpath = "//span[@class='innerHtml']") WebElement successMessage;
 	@FindBy(xpath="(//input[@placeholder='Start typing name ...'])[1]") WebElement textboxStartTyping;
 	@FindBy(xpath="//div[@class='filteredContainer']//div[@class='title']") WebElement searchedCustomer;
 	@FindBy(xpath="//div[@class='titleEditButtonContainer']//div[@class='editButton']") WebElement buttonEdit;
-	@FindBy(xpath="//div[@class='editCustomerPanelHeader']//div[@class='action'][normalize-space()='ACTIONS']" )
-	WebElement buttonAction;
-	@FindBy(xpath="//div[@class='taskManagement_customerPanel']//div[@class='title'][normalize-space()='Delete']")
-	WebElement buttonDelete;
-	@FindBy(xpath="(//span[@class='submitTitle buttonTitle'])[1]") WebElement buttonDeletePermanently;
+	@FindBy(xpath="//div[@class='editCustomerPanelHeader']//div[@class='action'][normalize-space()='ACTIONS']" ) WebElement buttonAction;
+	@FindBy(xpath="//div[@class='taskManagement_customerPanel']//div[@class='title'][normalize-space()='Delete']") 	WebElement buttonDelete;
+	@FindBy(xpath="//span[normalize-space()='Delete permanently']") WebElement buttonDeletePermanently;
 
-
-    
+//	"method":"xpath","selector":"//div[@class='filteredContainer']//div[@class='title']"}  
 	// ********************************Page Initialization*********************************//
 
 	public TasksPage()
@@ -81,31 +78,36 @@ public class TasksPage extends DriverScript {
 		searchedCustomer.click();
 	}
 	
-		
 	
-	public void ClickAddNewwButton ()
+	public void clickAddNewButton()
 	{
-		AddNewButton.click();
+		addNewButton.click();
 	}
-	public void clicknewcustomeritem ()
+	
+	public void clickNewCustomerItem()
 	{
-		newcustomeritem.click();
+		newCustomerItem.click();
 	}
-	public void Entercustomernametextbox (String Custname)
+	
+	public void enterCustomerName(String custname)
 	{
-		customernameTextbox.sendKeys(Custname);
+		customernameTextbox.sendKeys(custname);
 	}
-	public void EntercustomerDescription (String Desc)
+	
+	public void enterCustomerDescription(String custdesc)
 	{
-		CustomerDescriptionTextBox.sendKeys(Desc);
+		customerdescriptionTextarea.sendKeys(custdesc);
 	}
-	public void ClickcreateCustomerButton ()
+	
+	public void clickCreateCustomer()
 	{
-		createCustomerButton.click();
+		createcustomerButton.click();
 	}
-	public String getSuccessMessage ()
+	
+	public String getSuccessMessage()
 	{
-		return SuccessMessage.getText();
+		return successMessage.getText();
 	}
-
+	
+	
 }

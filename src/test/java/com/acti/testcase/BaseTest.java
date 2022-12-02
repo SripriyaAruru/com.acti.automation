@@ -27,6 +27,7 @@ public class BaseTest extends DriverScript {
 	public void Teardown() {
 		quitdriver();
 	}
+	
 	@DataProvider(name="actilogin")
 	public Object[][] Testdata()
 	{

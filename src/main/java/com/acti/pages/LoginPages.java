@@ -18,11 +18,11 @@ public class LoginPages extends DriverScript
 
 {
 //********************************Page Elements**********************************//
-	@FindBy(id="username")WebElement usernameTextbox;
-	@FindBy(name="pwd") WebElement passwordTextbox;
-	@FindBy(xpath = "//div[text( ) = 'Login ']") WebElement LoginButton;
-	@FindBy(linkText = "Forgot your password?") WebElement ForgotpasswordLink;
-	@FindBy(xpath = "//div[@class = 'atLogoImg']") WebElement actiTimeImage;
+	@FindBy(id = "username") WebElement usernameTextbox;
+	@FindBy(name = "pwd") WebElement passwordTextbox;
+	@FindBy(xpath = "//div[text()='Login ']") WebElement loginButton;
+	@FindBy(linkText = "Forgot your password?") WebElement forgotPasswordLink;
+	@FindBy(className = "atLogoImg") WebElement actiImg;
 	
 	//********************************Page Initialization*********************************//
 	
@@ -34,32 +34,34 @@ public class LoginPages extends DriverScript
 	
 	//********************************Page Method/Actions*********************************//
 	
-	public void enterUsername (String username)
+	public void enterUsername(String username)
 	{
 		usernameTextbox.sendKeys(username);
-		
-	}
-	public void enterPassword (String Password)
-	{
-		passwordTextbox.sendKeys( Password);
 	}
 	
-	public void Clicklogin ()
+	public void enterPassword(String password)
 	{
-		LoginButton.click();
-	}
-	public boolean VerifyForgotPassword ()
-	{
-		return ForgotpasswordLink.isDisplayed();
+		passwordTextbox.sendKeys(password);
 	}
 	
-	public boolean verifyActiTimeLogo ()
+	public void clickLogin()
 	{
-		return actiTimeImage.isDisplayed();
+		loginButton.click();
+	}
+	
+	public boolean verifyForgotPassword()
+	{
+		return forgotPasswordLink.isDisplayed();
+	}
+	
+	public boolean verifyActiLogo()
+	{
+		return actiImg.isDisplayed();
 	}
 	
 	public String getLoginPageTitle()
 	{
 		return driver.getTitle();
 	}
+
 }
