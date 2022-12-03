@@ -5,11 +5,24 @@
     <classes>
       <class name="com.acti.testcase.TaskPageTest">
         <methods>
-          <include name="Teardown"/>
-          <include name="Setup"/>
-          <include name="testDeleteCustomer" invocation-numbers="0"/>
+          <include name="testcreatCutomer"/>
+          <include name="setupReport"/>
+          <include name="tearDown"/>
+          <include name="testDeleteCustomer"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- com.acti.testcase.TaskPageTest -->
+      <class name="com.acti.testcase.LoginPageTests">
+        <methods>
+          <include name="testForgotPasswordIsDisplayed"/>
+          <include name="testLoginPageTitle"/>
+          <include name="setupReport"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testActiImageIsDisplayed"/>
+          <include name="testLoginFunction"/>
+        </methods>
+      </class> <!-- com.acti.testcase.LoginPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

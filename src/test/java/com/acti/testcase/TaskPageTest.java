@@ -16,7 +16,7 @@ public class TaskPageTest extends BaseTest {
 		ep.clickTaskMenu();
 		tp.clickAddNewButton();		
 		tp.clickNewCustomerItem();
-		tp.enterCustomerName("TestCustomer");
+		tp.enterCustomerName("Test");
 		tp.enterCustomerDescription("Dummy Customer created for testing ");
 		tp.clickCreateCustomer();
 		String sesuccessmessage = tp.getSuccessMessage();
@@ -31,7 +31,7 @@ public class TaskPageTest extends BaseTest {
 		lp.enterPassword(Password);
 		lp.clickLogin();
 		ep.clickTaskMenu();
-		tp.enterSearchCustomer("TestCustomer");
+		tp.enterSearchCustomer("Test");
 		tp.clickSearchedCustomer();
 		tp.clickEditButton();
 		tp.clickAction();

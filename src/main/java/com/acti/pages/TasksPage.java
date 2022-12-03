@@ -33,7 +33,6 @@ public class TasksPage extends DriverScript {
 	@FindBy(xpath="//div[@class='taskManagement_customerPanel']//div[@class='title'][normalize-space()='Delete']") 	WebElement buttonDelete;
 	@FindBy(xpath="//span[normalize-space()='Delete permanently']") WebElement buttonDeletePermanently;
 
-//	"method":"xpath","selector":"//div[@class='filteredContainer']//div[@class='title']"}  
 	// ********************************Page Initialization*********************************//
 
 	public TasksPage()
@@ -48,6 +47,7 @@ public class TasksPage extends DriverScript {
 	public void enterSearchCustomer(String custname)
 	{
 		textboxStartTyping.sendKeys(custname);
+		Helper.sleep();
 	}
 	
 	public void clickDeletePermanently()
@@ -59,6 +59,7 @@ public class TasksPage extends DriverScript {
 	public void clickDelete()
 	{
 		buttonDelete.click();
+		Helper.sleep();
 	}
 	
 	public void clickAction()
@@ -76,22 +77,26 @@ public class TasksPage extends DriverScript {
 	public void clickSearchedCustomer()
 	{
 		searchedCustomer.click();
+		Helper.sleep();
 	}
 	
 	
 	public void clickAddNewButton()
 	{
 		addNewButton.click();
+		Helper.sleep();
 	}
 	
 	public void clickNewCustomerItem()
 	{
 		newCustomerItem.click();
+		Helper.sleep();
 	}
 	
 	public void enterCustomerName(String custname)
 	{
 		customernameTextbox.sendKeys(custname);
+		Helper.sleep();
 	}
 	
 	public void enterCustomerDescription(String custdesc)

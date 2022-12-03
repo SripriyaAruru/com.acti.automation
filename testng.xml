@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-       <class name="com.acti.testcase.BaseTest"/>
       <class name="com.acti.testcase.LoginPageTests"/>
+      <class name="com.acti.testcase.BaseTest"/>
       <class name="com.acti.testcase.TaskPageTest"/>
     </classes>
   </test> <!-- Test -->
